@@ -38,4 +38,6 @@
 	</bean>
 	
 	<jpa:repositories base-package="cz.tannth.jba.repository" entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager"/>
+
+	<import resource="security.xml"/>
 </beans>
