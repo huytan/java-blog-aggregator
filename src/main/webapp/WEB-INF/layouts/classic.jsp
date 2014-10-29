@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -45,11 +46,11 @@
               	<li class="${current == 'users' ? 'active' : '' }"><a href='<spring:url value="/users.html"></spring:url>'>Users</a></li>
               </security:authorize>
               <li class="${current == 'register' ? 'active' : '' }"><a href='<spring:url value="/register.html"></spring:url>'>Register</a></li>
-              	<security:authorize access="! isAuthenticated()">
+              	<security:authorize access="!isAuthenticated()">
             	    <li class="${current == 'login' ? 'active' : '' }"><a href='<spring:url value="/login.html"></spring:url>'>Login</a></li>
             	</security:authorize>
             	<security:authorize access="isAuthenticated()">
-            	<li class="${current == 'users' ? 'active' : '' }"><a href='<spring:url value="/account.html"></spring:url>'>My account</a></li>
+            	<li class="${current == 'account' ? 'active' : '' }"><a href='<spring:url value="/account.html"></spring:url>'>My account</a></li>
               <li ><a href='<spring:url value="/logout"></spring:url>'>Logout</a></li>
               </security:authorize>
             </ul>
@@ -65,5 +66,6 @@
 		<tiles:insertAttribute name="footer"/>
 	</center>
 </div>
+
 </body>
 </html>
