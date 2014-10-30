@@ -5,11 +5,16 @@
  * See generator home page at: http://code.google.com/p/fluent-builders-generator-eclipse-plugin/
  */
 
-package cz.tannth.jba.entity;
+package cz.tannth.jba.entity.builder;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import cz.tannth.jba.entity.Blog;
+import cz.tannth.jba.entity.Item;
+import cz.tannth.jba.entity.Role;
+import cz.tannth.jba.entity.User;
 
 public class UserBuilder extends UserBuilderBase<UserBuilder> {
     public static UserBuilder user() {
